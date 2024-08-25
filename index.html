@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="../Public/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../Public/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../Public/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../Public/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../Public/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../Public/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../Public/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../Public/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../Public/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Public/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../Public/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Public/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../Public/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Public/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Public/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../Public/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Portal de Vendas</title>
+
+
+    <link href="../Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Public/css/bootstrap-reset.css" rel="stylesheet">
+
+
+    <link href="../Public/assets/toast/jquery.toast.css" rel="stylesheet" type="text/css"/>
+
+
+    <link href="../Public/assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+    <link href="../Public/css/style.css" rel="stylesheet">
+    <link href="../Public/css/style-responsive.css" rel="stylesheet"/>
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.form-signin-heading{
+    background-color:#255885!important;
+}
+
+.logo-forge-login {
+    margin-left: 46%;
+    margin-top: 1%;
+    width: 8%;
+    height: auto;
+}
+
+.versao{
+    margin-left: 48%;
+    font: message-box;
+}
+
+.show_bg_2 {
+    /* The important line: */
+    background-image:  url('../Public/img/tema_forge_2022.jpg');
+    width: 100%;
+    height: 53%;
+    background-size: cover;
+    color:white;
+    background-position: top;
+    display: grid;
+    grid-template-columns: 38% 24% 38%;
+}
+.show_bg_1 {
+    /* background-image:  linear-gradient( #143E69 0,  #143E69 100%); */
+    width: 100%;
+    height: 26%;
+    background-size: cover;
+    color:white;
+    background-position: center;
+
+    /* background-image: linear-gradient(117deg, #1460c8 0%, #0f0d11 33%, #2B86C5 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #1460c8 0%, #0f0d11 33%, #164769 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #1460c8 33%, #164769 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #1460c8 33%, #020b46 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #0a4290 33%, #020b46 66%, #0f0e0e 100%); */
+
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #01357e 33%, #020b46 66%, #000000 100%); */
+    background-image: linear-gradient(117deg, #0f0d11 0%, #01357e 33%, #020b46 66%, #020b46 100%);
+}
+
+.show_bg_3 {
+    /* The important line: */
+    background-image:  linear-gradient( #143E69 0,  #143E69 100%);
+    width: 100%;
+    height: 21%;
+    background-size: cover;
+    color:white;
+    background-position: bottom;
+
+    /* background-image: linear-gradient(117deg, #1460c8 0%, #0f0d11 33%, #2B86C5 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #1460c8 0%, #0f0d11 33%, #164769 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #1460c8 33%, #164769 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #1460c8 33%, #020b46 66%, #0f0e0e 100%); */
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #0a4290 33%, #020b46 66%, #0f0e0e 100%); */
+
+    background-image: linear-gradient(117deg, #0f0d11 0%, #01357e 33%, #020b46 66%, #000000 100%);
+    /* background-image: linear-gradient(117deg, #0f0d11 0%, #01357e 33%, #020b46 66%, #020b46 100%); */
+}
+.footer{
+    position: fixed;
+    bottom: 52px;
+    left:0;
+    right: 37%;
+}
+
+
+.form-signin h2.form-signin-heading {
+    padding: 20px !important;
+}
+
+.form-signin{
+    margin: 1px auto 0 !important
+}
+
+
+
+/* max-width */
+@media screen and (max-width: 1407px) {
+	.footer{
+        position: fixed;
+        bottom: 36px;
+        left:0;
+        right: 32%;
+    }
+
+
+    .logo-forge-login {
+        margin-left: 46%;
+        margin-top: 0%;
+        width: 8%;
+        height: auto;
+    }
+
+
+    .versao{
+        margin-left: 47%;
+        font: message-box;
+    }
+
+    .form-signin{
+        margin: 0px auto 0 !important
+    }
+    #form{
+        max-height: 332px !important;
+    }
+
+    .form-signin h2.form-signin-heading {
+        padding: 12px !important;
+    }
+
+    .modulosSistema {
+        width: 13%;
+    }
+
+    #USU_SENHA {
+        margin-top: -3% !important;
+    }
+
+}
+
+@media screen and (min-width:1407px){
+    label.checkbox {
+        margin-top: 10%;
+    }
+
+    #USU_SENHA {
+        margin-top: 5%;
+    }
+
+    #USU_USUARIO {
+        margin-top: 2%;
+    }
+
+    .form-signin {
+        max-width: 333px !important;
+    }
+}
+
+@media screen and (max-width: 1128px) {
+    .form-signin{
+        margin: -56px auto 0 !important
+    }
+}
+
+
+canvas {
+    display: block;
+    width: 40%;
+    height: 45%;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js-r{
+  position: absolute;
+  width: 40%;
+    height: 55%;
+  /* background-color: #b61924; */
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#particles-js-l{
+  position: absolute;
+  /* width: 40%; */
+    height: 55%;
+  /* background-color: #b61924; */
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 20% 50%;
+}
+
+
+input {
+    text-transform: none !important;
+}
+
+</style>
+
+</head>
+
+<body class="">
+<div class='show_bg_1'>
+
+    <div>
+        <img class="logo-forge-login" src="../Public/img/logoforgelogin.jpg" alt="">
+        <h5 class="versao" >
+            Versão 3.1        </h5>
+    </div>
+</div>
+
+<div class='show_bg_2'>
+    <div>
+         <div id="particles-js-r"></div>
+    </div>
+    <div>
+        <div  id="form" class="form-signin">
+            <h2 class="form-signin-heading" >Login</h2>
+            <div class="login-wrap">
+                <input required="" type="text" id="USU_USUARIO" name="USU_USUARIO"
+                    class="form-control m-bot15" placeholder="Usuario" autofocus>
+                <input id="USU_SENHA" name="USU_SENHA" type="password"
+                    class="form-control m-bot15" placeholder="Senha">
+                <label class="checkbox">
+                    <input type="checkbox" id="PrimeiroAcesso" name="PrimeiroAcesso" onclick="PrimeiroAcessoRequered(this);"/> Primeiro Acesso?
+                </label>
+                <label class="checkbox">
+                    <span class="pull-right">
+                                <a data-toggle="modal" href="#myModal"> Esqueceu sua senha?</a>
+                            </span>
+                </label>
+                <button class="btn btn-lg btn-default btn-block" onclick="login()">Entrar</button>
+
+                                <p style="margin-top: 10px; color: white; font-weight: 500; opacity: 0.75;"
+                onmouseover="this.style.opacity = 1;" onmouseout="this.style.opacity = 0.75;">
+                    <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">
+                        <img src="../Public/img/chrome.png" style="width: 30px;">
+                        <span style="font-size: 13px; font-weight: 600; margin-left: 10px; color: #000000;">
+                                    Utilize somente com Google Chrome
+                                </span>
+                    </a>
+                </p>
+            </div>
+
+
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal"
+                class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Esqueceu Sua senha ?</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Usuário</p>
+                            <input type="text" id="usuario" placeholder="Usuário" autocomplete="off"
+                                class="form-control placeholder-no-fix">
+
+                        </div>
+                        <div class="modal-body">
+                            <p>Informe seu email para receber o código</p>
+                            <input type="mail" id="email" placeholder="Email" autocomplete="off"
+                                class="form-control placeholder-no-fix">
+
+                        </div>
+
+                        <div class="modal-body" align="right">
+                            <button id="solicitarToken" type="button" onclick="return ValidaUsuarioEmail();"
+                                    class="btn btn-info">Solicitar código
+                            </button>
+
+                        </div>
+
+                        <div class="form-group modal-footer">
+                            <p>Insira o código para sua senha ser zerada </p>
+                            <textarea id="codigo" placeholder="Código" autocomplete="off"
+                                    class="form-control placeholder-no-fix" disabled></textarea>
+                        </div>
+
+                        <div class="form-group modal-body" align="right">
+                            <button id="confirmar" onclick="return ValidaToken();" class="btn btn-success" type="button"
+                                    disabled> Confirmar
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <input type="hidden" id="campo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+    </div>
+    <div>
+    <div id="particles-js-l"></div>
+    </div>
+</div>
+<div class='show_bg_3'>
+    <!--INICIO: Logotipos de produtos forge -->
+    <div class="row footer text-right">
+        <div class="col-lg-12">
+            <a href="http://www.forgesolucoes.com.br/salestation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_sale.png" style="opacity:0.99;" >
+            </a>
+            <a href="http://www.forgesolucoes.com.br/dashstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_dash.png" style="opacity:0.30;">
+            </a>
+            <a href="http://www.forgesolucoes.com.br/quotesstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_quotes.png" style="opacity:0.30;">
+            </a>
+            <a href="http://www.forgesolucoes.com.br/onboardstation" target="_blank">
+                <img  class="modulosSistema" src="../Public/img/Logos_onboard.png" style="opacity:0.30;">
+            </a>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="http://www.forgesolucoes.com.br/crmstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_crm.png" style="opacity:0.30;">
+            </a>
+
+            <a href="http://www.forgesolucoes.com.br/catalogstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_catalog_back.png" style="opacity:0.30;">
+            </a>
+            <a hzef="http://www.forgesolucoes.com.br/emailstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_email.png" style="opacity:0.30;">
+            </a>
+            <a href="http://www.forgesolucoes.com.br/whatsstation" target="_blank">
+                <img class="modulosSistema" src="../Public/img/Logos_whats.png" style="opacity:0.30;">
+            </a>
+        </div>
+    </div>
+    <!--FIM: Logotipos de produtos forge -->
+</div>
+<script src="../Public/js/FuncaoGlobal.js"></script>
+
+<!-- JS -->
+<script type="text/javascript">
+
+
+
+</script>
+<script src="../Public/js/jquery.js"></script>
+<script src="../Public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../Public/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script type="text/javascript">
+
+particlesJS("particles-js-r", {
+  "particles": {
+    "number": {
+      "value": 380,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 0
+      },
+      "remove": {
+        "particles_nb": 0
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+particlesJS("particles-js-l", {
+  "particles": {
+    "number": {
+      "value": 380,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 0
+      },
+      "remove": {
+        "particles_nb": 0
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+    $(function () {
+
+        var endDate = 'november 20, 2020 15:20:00';
+
+        $('.countdown.simple').countdown({date: endDate});
+
+        $('.countdown.styled').countdown({
+            date: endDate,
+            render: function (data) {
+                $(this.el).html(" <strong> " + this.leadingZeros(data.days, 2) + "</strong> dias <strong>" + this.leadingZeros(data.hours, 2) + ":" + this.leadingZeros(data.min, 2) + ":" + this.leadingZeros(data.sec, 2) + "</strong>");
+
+                if (this.leadingZeros(data.days, 2) == "00" && this.leadingZeros(data.hours, 2) == "00" && this.leadingZeros(data.min, 2) == "00" && this.leadingZeros(data.sec, 2) == "00") {
+
+
+                    //location.reload();
+
+                }
+            }
+        });
+
+        $('.countdown.callback').countdown({
+            date: +(new Date) + 10000,
+            render: function (data) {
+                $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
+            },
+            onEnd: function () {
+                $(this.el).addClass('ended');
+            }
+        }).on("click", function () {
+            $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
+        });
+
+        // End time for diff purposes
+        var endTimeDiff = new Date().getTime() + 15000;
+        // This is server's time
+        var timeThere = new Date();
+        // This is client's time (delayed)
+        var timeHere = new Date(timeThere.getTime());
+        // Get the difference between client time and server time
+        var diff_ms = timeHere.getTime() - timeThere.getTime();
+        // Get the rounded difference in seconds
+        var diff_s = diff_ms / 1000 | 0;
+
+        var notice = [];
+        notice.push('Server time: ' + timeThere.toDateString() + ' ' + timeThere.toTimeString());
+        notice.push('Your time: ' + timeHere.toDateString() + ' ' + timeHere.toTimeString());
+        notice.push('Time difference: ' + diff_s + ' seconds (' + diff_ms + ' milliseconds to be precise). Your time is a bit behind.');
+
+        $('.offset-notice').html(notice.join('<br />'));
+
+        $('.offset-server .countdown').countdown({
+            date: endTimeDiff,
+            offset: diff_s * 1000,
+            onEnd: function () {
+                $(this.el).addClass('ended');
+            }
+        });
+
+        $('.offset-client .countdown').countdown({
+            date: endTimeDiff,
+            onEnd: function () {
+                $(this.el).addClass('ended');
+            }
+        });
+
+    });
+
+    function PrimeiroAcessoRequered(){
+        // alert('Texto 1.');
+        if (document.getElementById('PrimeiroAcesso').checked == true) {
+            // alert('Texto 2');
+            document.getElementById("PrimeiroAcesso").required = false;
+            // removeAttribute("Senha", "required");
+        } else {
+            // alert('Texto 3');
+            document.getElementById("PrimeiroAcesso").required = true;
+            // setAttribute('PrimeiroAcesso', 'required', '');
+        }
+    }
+
+
+    function ValidaUsuarioEmail() {
+
+        if (document.getElementById("usuario").value === "") {
+            alert('Preencha o campo de usuário!');
+            document.getElementById("usuario").focus();
+            return false;
+        } else if (document.getElementById("email").value === "") {
+            alert('Preencha o campo de e-mail!');
+            document.getElementById("email").focus();
+            return false;
+        }
+
+        $.ajax({
+            url: '../Controller/Login.php?DAOLogin=PesquisaEmailUsuario',
+            type: 'GET',
+            data: 'usuario=' + $('#usuario').val() + '&email=' + $('#email').val(),
+            dataType: 'json',
+            success: function (data) {
+                if (data.valido === true) {
+                    alert('Token enviado com sucesso!');
+                    document.getElementById("codigo").disabled = false;
+                    document.getElementById("confirmar").disabled = false;
+                    document.getElementById("email").disabled = true;
+                    document.getElementById("usuario").disabled = true;
+                    document.getElementById("solicitarToken").disabled = true;
+
+                } else {
+                    alert('Usuário ou e-mail não encontrado!');
+                    $('#usuario').focus();
+                }
+            }
+
+        });
+        return true;
+    }
+
+    function ValidaToken() {
+
+        $.ajax({
+            url: '../Controller/Login.php?DAOLogin=validaToken',
+            type: 'GET',
+            data: '&email=' + $('#email').val() + '&usuario=' + $('#usuario').val() + '&token=' + $('#codigo').val(),
+            dataType: 'json',
+            success: function (data) {
+                alert(data.menssagem);
+                $("#myModal").modal('hide');
+                window.location.href = data.redirect;
+            }
+        });
+    }
+
+    function login(){
+        var usuario = document.getElementById("USU_USUARIO").value;
+        var senha = document.getElementById("USU_SENHA").value;
+        var primeiroAcesso = $('#PrimeiroAcesso').val();
+
+        if (usuario === "") {
+            alert('Preencha o campo de usuário!');
+            document.getElementById("USU_USUARIO").focus();
+            return false;
+        } else if (senha === "" && document.getElementById("PrimeiroAcesso").checked == false) {
+            alert('Preencha o campo de senha!');
+            document.getElementById("USU_SENHA").focus();
+            return false;
+        }
+
+        $.ajax({
+            url: '../Controller/Login.php?DAOLogin=login',
+            type: 'GET',
+            data: { USU_USUARIO:usuario,USU_SENHA:senha,PrimeiroAcesso:primeiroAcesso},
+            dataType: 'json',
+            success: function (data) {
+               alert(data.menssagem);
+                window.location.href = data.redirect;
+            }
+
+        });
+        return true;
+    }
+
+</script>
+</body>
+</html>
